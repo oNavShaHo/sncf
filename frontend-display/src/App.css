@@ -1,0 +1,90 @@
+/* Full-screen container with a background image */
+.feedback-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: auto;
+  gap: 20px;
+  padding: 40px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./bgfeedback.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Base styling for feedback cards with a fixed 16:9 aspect ratio */
+.feedback-card {
+  position: relative;
+  background-color: #ddf7ff;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #333;
+  animation: fadeInOut 0.5s ease-in-out;
+  /* Maintain 16:9 aspect ratio */
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.feedback-card-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Different sizes for the collage layout */
+.feedback-card.small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.feedback-card.medium {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.feedback-card.large {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+/* Feedback text styling */
+.feedback-text {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+  color: #333;
+}
+
+/* Feedback image styling */
+.feedback-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
