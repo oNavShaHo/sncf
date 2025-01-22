@@ -13,7 +13,7 @@ function App() {
     formData.append("image", image);
 
     try {
-      await axios.post("http://11.11.0.18:5000/api/feedback", formData);
+      await axios.post("http://192.168.68.102:5000/api/feedback", formData);
       alert("Feedback submitted!");
       setText("");
       setImage(null);

@@ -1,22 +1,24 @@
 /* Full-screen container with a background image */
-.feedback-container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+.feedback-container12 {
+  /* display: grid; */
+  /* grid-template-columns: repeat(6, 1fr);
   grid-auto-rows: auto;
-  gap: 20px;
-  padding: 40px;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("./bgfeedback.png");
+  gap: 20px; */
+  /* padding: 40px; */
+  width: 100%;
+  height: 90%;
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  padding-top: 10px;
 }
 
 /* Base styling for feedback cards with a fixed 16:9 aspect ratio */
 .feedback-card {
   position: relative;
+
   background-color: #ddf7ff;
+
   border-radius: 15px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -63,7 +65,7 @@
 
 /* Feedback text styling */
 .feedback-text {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 10px;
   overflow-wrap: break-word;
   color: #333;
@@ -87,4 +89,180 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+.feedback-mid-highlight {
+  min-width: 1400px;
+}
+.feedback-card {
+  min-width: 400px;
+
+  height: 32.1vh;
+  margin: 5px;
+  float: left;
+  padding: 50px 40px 40px 40px;
+  background-color: #ddf7ff;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.feedback-container1 {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.feedback-card-img {
+  width: 177px;
+  height: 177px;
+  float: left;
+  background: url(vistar-bg.png) center no-repeat;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 55px;
+}
+.feedback-card-img img {
+  width: 100%;
+  height: auto;
+  float: left;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.feedback-card-comment {
+  width: 100%;
+  height: auto;
+  float: left;
+  padding: 20px 0 30px 0;
+  position: relative;
+}
+.feedback-card-comment::before {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(qstart.png) center no-repeat;
+  content: "";
+}
+.feedback-card-comment::after {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: url(qend.png) center no-repeat;
+  content: "";
+}
+
+.feedback-card-comment p {
+  width: 100%;
+  height: auto;
+  float: left;
+  color: #000;
+  font-size: 42px;
+  margin: 0;
+  padding: 0;
+}
+
+.feedback-outer {
+  width: 100%;
+  height: 100vh;
+  float: left;
+  /* background-color: #000; */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.feedback-left {
+  /* background-color: chocolate; */
+  width: 20%;
+  height: 100vh;
+  float: left;
+}
+
+.feedback-left .feedback-card,
+.feedback-right .feedback-card {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 67px 40px 67px 40px;
+}
+
+.feedback-right {
+  /* background-color: blue; */
+  width: 20%;
+  height: 100vh;
+  float: left;
+}
+
+.feedback-middle {
+  /* background-color: brown; */
+  width: 59%;
+  height: 100vh;
+  float: left;
+}
+.feedback-mid-top,
+.feedback-mid-bottom {
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/* .feedback-mid-top .feedback-card,
+.feedback-mid-bottom .feedback-card {
+  margin-bottom: 10px;
+} */
+
+.feedback-mid-highlight {
+  width: 100%;
+  float: left;
+}
+.feedback-card-highlight {
+  width: auto;
+  height: auto;
+  float: left;
+  padding: 70px 220px;
+  background: url(highlight-qstart.png) left 50px center no-repeat,
+    url(highlight-qend.png) right 50px center no-repeat #ddf7ff;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.feedback-card-highlight-img {
+  width: auto;
+  height: auto;
+  float: left;
+  padding: 100px;
+  background: url(vistaar-big.png) center no-repeat;
+}
+.feedback-highlight-img-outer {
+  width: 300px;
+  height: 300px;
+  float: left;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.feedback-highlight-text {
+  width: auto;
+  height: auto;
+  float: left;
+  font-size: 52px;
+  margin-left: 50px;
+}
+
+.feedback-card-highlight-comment {
+}
+/* .feedback-mid-bottom {
+} */
+
+.feedback-mid-top .feedback-card:last-of-type,
+.feedback-mid-bottom .feedback-card:last-of-type {
+  margin-bottom: 0;
 }
